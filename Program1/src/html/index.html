@@ -9,9 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
 
-<body style="width:70%" bgcolor="lightblue" onload="myFunction()">
+<body style="width:70%" bgcolor="lightblue" onload="setDefaultValues()">
     <div style="margin-left: 50%">
-        <form name="registerform" action="" onsubmit="return validateForm()" method="post">
+        <form name="registerform" action="database.html" onsubmit="return validateForm()" method="GET">
             <h1 class="head">Employee Details</h1>
             <table class="tabledetails">
                 <tr>
@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <th>Date Of Filling </th>
-                    <td><input type="date" id="myDate" name="date" class="attribute" required /></td>
+                    <td><input type="date" id="myDate" name="date" class="attribute" required disabled/></td>
                 </tr>
                 <tr>
                     <th>Gender</th>
@@ -54,7 +54,9 @@
             <br>
             <br>
             <input class="buttons" type="submit" value="SUBMIT" />
-            <input class="buttons" type="reset" value="RESET" />
+            <input class="buttons" type="reset" value="RESET" onclick="resetFields()" />
+            <input class="buttons" value="VIEW DETAILS" onclick="viewDetails()" />
+
         </form>
     </div>
 </body>
